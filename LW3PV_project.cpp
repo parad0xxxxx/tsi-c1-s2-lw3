@@ -109,7 +109,7 @@ void addBook()
         enlightenCutie("warn", INT_EXPECTED_ERROR);
         exit(0);
     }
-    std::cin.ignore();
+    std::cin.ignore(32767, '\n');
 
     Book* books = new Book[amount];
 
@@ -132,7 +132,7 @@ void addBook()
         if (!std::cin) {
             enlightenCutie("warn", INT_EXPECTED_ERROR);
         }
-        std::cin.ignore();
+        std::cin.ignore(32767, '\n');
         setConsoleColor(7);
     }
 
@@ -158,7 +158,7 @@ void searchBook()
     int amount = getBooksAmount();
 
     char searchName[g_charElementWidthMax];
-    std::cin.ignore();
+    std::cin.ignore(32767, '\n');
     setConsoleColor(3);
     std::cout << "Enter book name to search: ";
     setConsoleColor(15);
@@ -189,7 +189,7 @@ void deleteBook()
     int amount = getBooksAmount();
 
     char searchName[g_charElementWidthMax];
-    std::cin.ignore();
+    std::cin.ignore(32767, '\n');
     setConsoleColor(3);
     std::cout << "Enter book name to delete: ";
     setConsoleColor(15);
@@ -222,7 +222,7 @@ void deleteBook()
         enlightenCutie("warn", INT_EXPECTED_ERROR);
         exit(0);
     }
-    std::cin.ignore();
+    std::cin.ignore(32767, '\n');
 
     if (softDeletedRecordConfirm != 0) {
 
